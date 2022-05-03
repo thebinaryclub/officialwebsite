@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   VisuallyHidden
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaLinkedinIn, FaDiscord } from 'react-icons/fa';
 import Contact from '../components/Contact';
 
 const SocialButton = ({ children, label, href }) => {
@@ -58,13 +58,13 @@ export default function Footer() {
         >
           <Text>© 2022 Chakra Templates. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
+            <SocialButton label={'LinkedIn'} href={'https://www.linkedin.com/in/binaryclub/'}>
+              <FaLinkedinIn />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube />
+            <SocialButton label={'Discord'} href={'https://discord.gg/k9FU7xXG'}>
+              <FaDiscord />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
+            <SocialButton label={'Instagram'} href={'https://www.instagram.com/thebinary.club/'}>
               <FaInstagram />
             </SocialButton>
           </Stack>
