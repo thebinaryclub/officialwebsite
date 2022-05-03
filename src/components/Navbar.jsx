@@ -226,11 +226,11 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
   const NAV_ITEMS = [
     {
       label: 'About',
-      href: 'http://9aditya9.biz'
+      // href: 'http://9aditya9.biz'
     },
     {
       label: 'Events',
-      href:'http://9aditya9.biz'
+      // href:'http://9aditya9.biz'
     },
     {
       label: 'Team',
