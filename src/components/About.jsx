@@ -13,7 +13,7 @@ const About = () => {
         >
             <Text fontSize='5xl'
             style={{ 
-              border: '2px solid #ed64a6',
+              border: '2px solid #48BB78 ',
               borderTopLeftRadius: '35px',
               borderBottomRightRadius: '35px'
             }}
@@ -35,7 +35,7 @@ const About = () => {
                 bg={'lightgray'}
                 p={5}
                 style={{
-            backgroundColor: '#f56565',
+            backgroundColor: '#38A169',
                   boxShadow: '10px 10px',
                   lineHeight: '1.2em'
                 }}

@@ -30,7 +30,11 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
     const { isOpen, onToggle } = useDisclosure();
     const { colorMode } = useColorMode(); 
     return (
-      <Box>
+      <Box style={{ 
+        position:'sticky',
+        top:'0',
+        zIndex: 100,
+      }}>
         <Flex
           bg={useColorModeValue('white', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
@@ -78,10 +82,10 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
               fontSize={'md'}
               fontWeight={600}
               color={'white'}
-              bg={'pink.400'}
+              bg={'green.400'}
               href={'#'}
               _hover={{
-                bg: 'pink.300',
+                bg: 'green.300',
               }}>
               Join Discord
             </Button>
@@ -134,12 +138,12 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
         display={'block'}
         p={2}
         rounded={'md'}
-        _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+        _hover={{ bg: useColorModeValue('green.50', 'gray.900') }}>
         <Stack direction={'row'} align={'center'}>
           <Box>
             <Text
               transition={'all .3s ease'}
-              _groupHover={{ color: 'pink.400' }}
+              _groupHover={{ color: 'green.400' }}
               fontWeight={500}>
               {label}
             </Text>
@@ -153,7 +157,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
             justify={'flex-end'}
             align={'center'}
             flex={1}>
-            <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+            <Icon color={'green.400'} w={5} h={5} as={ChevronRightIcon} />
           </Flex>
         </Stack>
       </Link>
