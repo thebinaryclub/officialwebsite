@@ -11,19 +11,27 @@ import {
   VStack,
   Code,
   Grid,
-  theme,
+  // theme,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { Logo } from './Logo';
 import {Home} from './screens/Home';
+import './App.css'
+import theme from './theme';
+import { ParallaxProvider } from 'react-scroll-parallax';
+
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
+            <ParallaxProvider>
+
       <Home />
 
-      <Box textAlign="center" fontSize="xl">
-      </Box>
+      {/* <Box textAlign="center" fontSize="xl">
+      </Box> */}
+            </ParallaxProvider>
+
     </ChakraProvider>
   );
 }

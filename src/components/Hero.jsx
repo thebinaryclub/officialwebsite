@@ -10,95 +10,17 @@ import {
   Icon,
   IconButton,
   createIcon,
-  IconProps,
+  // IconProps,
   useColorModeValue,
 } from '@chakra-ui/react';
-import Particles from "react-tsparticles";
+// import Particles from "react-tsparticles";
+// import particlesconfig from '../assets/particlesconfig.json';
+// import ParticlesBackground from './ParticlesBackground';
 export default function Hero() {
   return (
     <Container maxW={'7xl'}>
-   <Particles
-        id="tsparticles"
-        options={{
-          // background: {
-          //   color: {
-          //     value: "#0d47a1",
-          //   },
-          // },
-          fpsLimit: 60,
-          interactivity: {
-            detectsOn: "canvas",
-            events: {
-              onClick: {
-                enable: true,
-                mode: "push",
-              },
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              resize: true,
-            },
-            modes: {
-              bubble: {
-                distance: 400,
-                duration: 2,
-                opacity: 0.8,
-                size: 40,
-              },
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-            },
-          },
-          particles: {
-            color: {
-              value: "#ffffff",
-            },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
-            collisions: {
-              enable: true,
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              outMode: "bounce",
-              random: false,
-              speed: 6,
-              straight: false,
-            },
-            number: {
-              density: {
-                enable: true,
-                value_area: 800,
-              },
-              value: 80,
-            },
-            opacity: {
-              value: 0.5,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              random: true,
-              value: 5,
-            },
-          },
-          detectRetina: true,
-        }}
-      />
-      <Stack
+      {/* <ParticlesBackground /> */}
+            <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
@@ -111,6 +33,7 @@ export default function Hero() {
             <Text
               as={'span'}
               fontFamily={'aclonica'}
+              color={'white'}
               position={'relative'}
               _after={{
                 content: "''",
@@ -119,13 +42,13 @@ export default function Hero() {
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
-                bg: 'green.400',
+                bg: 'purple.400',
                 zIndex: -1,
               }}>
-              B<span style={{color: 'green'}}>i</span>nary
+              B<span style={{color: 'purple'}}>i</span>nary
             </Text>
             <br />
-            <Text as={'span'} color={'green.400'} fontSize='3xl'>
+            <Text as={'span'} color={'purple.400'} fontSize='3xl'>
               It's all about 0's and 1's
             </Text>
           </Heading>
@@ -143,9 +66,9 @@ export default function Hero() {
               fontWeight={'normal'}
               fontFamily={'aclonica'}
               px={6}
-              colorScheme={'green'}
-              bg={'green.400'}
-              _hover={{ bg: 'green.500' }}>
+              colorScheme={'purple'}
+              bg={'purple.400'}
+              _hover={{ bg: 'purple.500' }}>
               Learn more
             </Button>
    
@@ -164,7 +87,7 @@ export default function Hero() {
             top={'-20%'}
             left={0}
             zIndex={-1}
-            color={useColorModeValue('green.50', 'green.400')}
+            color={useColorModeValue('purple.50', 'purple.400')}
           />
           <Box
             position={'relative'}

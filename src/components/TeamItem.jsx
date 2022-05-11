@@ -12,7 +12,7 @@ import { Icon } from '@chakra-ui/react'
 import { FaGithub } from 'react-icons/fa';
 import {RiHomeHeartFill} from 'react-icons/ri'
 
-import styled, { keyframes } from 'styled-components';
+// import styled, { keyframes } from 'styled-components';
 
 const IMAGE = 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
 
@@ -23,9 +23,9 @@ const TeamItem = ({ image = IMAGE, name = "Name", description, title }) => {
       <Box
         role={'group'}
         px={6}
-        p={5}
+        // p={5}
         w={'300px'}
-        h={'400px'}
+        h={'450px'}
         bg={useColorModeValue('white', 'gray.800')}
         boxShadow={'2xl'}
         rounded={'lg'}
@@ -44,6 +44,8 @@ const TeamItem = ({ image = IMAGE, name = "Name", description, title }) => {
             rounded={'lg'}
             objectFit={'cover'}
             src={image}
+            w={'250px'}
+            h={'250px'}
           />
         </Box>
         <Stack align={'center'} mt={2}>

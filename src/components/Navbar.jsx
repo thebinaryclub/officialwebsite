@@ -36,7 +36,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
         zIndex: 100,
       }}>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue('white', '#001137')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
           py={{ base: 2 }}
