@@ -10,7 +10,7 @@ const styles =  {
     body: {
       // fontFamily: 'body',
       // color: mode('red', 'whiteAlpha.900')(props),
-      bg: mode('white', '#001137')(props),
+      bg: mode('white', 'black')(props),
       lineHeight: 'base',
     },
     Navbar: {

@@ -1,14 +1,12 @@
-import { Box, SimpleGrid, Icon, Text, Stack, Flex, Image } from '@chakra-ui/react';
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
-import { Parallax, useParallax } from 'react-scroll-parallax';
+import { Box, Icon, Text, Stack, Flex, Image } from '@chakra-ui/react';
+import { FcAssistant } from 'react-icons/fc';
+import { Parallax } from 'react-scroll-parallax';
 import './domain.css';
-import { ItemMover } from './Team';
 const Feature = ({ title, text="", icon, style }) => {
     return (
-        <Stack style={{border: '1px solid gray'}} _hover={{bg: 'RGBA(255, 255, 255, 0.04)'}} m={2} p={4}>
+        <Stack
+         style={{border: '1px solid gray'}} _hover={{bg: 'RGBA(255, 255, 255, 0.04)'}} m={2} p={4}>
             <Flex
-                // w={26}
-                // h={26}
                 align={'start'}
                 justify={'start'}
                 color={'white'}
@@ -20,21 +18,18 @@ const Feature = ({ title, text="", icon, style }) => {
             <Text fontWeight={800} fontSize={'xl'}>{title}</Text>
             <Text>{text}</Text>
         </Stack>
-        // <div className="domains-item" style={style}>
-        //     <Text fontWeight={600}>{title}</Text>
-        // </div>
+  
     );
 };
 
 
 export default function Domain() {
     return (
-        <Box  mt={5} pos={'relative'} w={'100%'} overflow={'hidden'} mb={5}>
-            {/* <Image src={'/images/dombg.svg'} w={'100%'} h={'100%'} style={{
-                position: 'absolute',
-                zIndex: '-1',
+        <div style={{minwidth: '100vw', minheight: '100vh'}}>
 
-            }} /> */}
+        <Box  mt={5} pos={'relative'} w={'100%'} mb={5}
+        
+        >
             <Flex
                 pt={5}
                 minH={'60px'}
@@ -67,10 +62,7 @@ export default function Domain() {
                     '55%', // 62em+
                   ]}
                 >
-                    {/* <div>hello</div> */}
                 <Flex wrap={'wrap'} direction={['row', 'col']} w={'fit-content'} align='center' justifyContent={'center'} style={{ padding: '0px', width: 'auto' }}> 
-
-                {/* <ItemMover> */}
                 {
                     Domains.map((domain) => {
                         return(
@@ -80,10 +72,8 @@ export default function Domain() {
                         )
                     })
                 }
-                {/* </ItemMover> */}
                 </Flex>
                 </Box>     
-            {/* <Flex w={'100%'} justifyContent={'center'} > */}
                 <Box maxW={'md'} alignItems="center">
                     <Parallax
                     speed={-100} 
@@ -91,32 +81,9 @@ export default function Domain() {
                     <Image src={'/images/domain.svg'} w={'100%'} h={'100%'} />
                     </Parallax>
                 </Box>
-            {/* </Flex> */}
             </Flex>
-
-            {/* <Flex justifyContent={'center'} bg={'white'}>
-
-                        <Parallax
-                        rotate={[0, 360]}
-                        speed={5}
-                        >
-                <Box as={'div'} className="dom-container" >
-
-                    <div className="dom-items" >
-
-                     
-                        {
-                    Domains.map((domain) => {
-                        return(
-                       <Feature title={domain.title} style={{color: 'purple'}}/> 
-                        )
-                    })
-                }
-                    </div>
-                </Box>
-                        </Parallax>
-            </Flex> */}
         </Box>
+        </div>
     );
 }
 

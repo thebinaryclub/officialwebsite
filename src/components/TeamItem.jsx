@@ -19,20 +19,20 @@ const IMAGE = 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixli
 
 const TeamItem = ({ image = IMAGE, name = "Name", description, title }) => {
   return (
-    <Center p={2} pr={20}>
+    <Center pr={20}>
       <Box
         role={'group'}
-        px={6}
+        // px={6}
         // p={5}
-        w={'300px'}
-        h={'450px'}
-        bg={useColorModeValue('white', 'gray.800')}
-        boxShadow={'2xl'}
-        rounded={'lg'}
+        w={'250px'}
+        h={'325px'}
+        bg={'transparent'}
+        // boxShadow={'2xl'}
+        // rounded={'lg'}
         pos={'relative'}
         zIndex={1}>
         <Box
-          rounded={'lg'}
+          // rounded={'lg'}
           align="center"
           style={{
             alignItems: 'center',
@@ -64,10 +64,10 @@ const TeamItem = ({ image = IMAGE, name = "Name", description, title }) => {
               {description}
             </Text>
           </Stack>
-          <Stack align={'center'} direction={'row'} spacing={'25px'} pos={'absolute'} style={{bottom: 0}}>
+          {/* <Stack align={'center'} direction={'row'} spacing={'25px'} pos={'absolute'} style={{bottom: 0}}>
             <Icon w={8} h={8} as={FaGithub} />
             <Icon w={8} h={8} as={RiHomeHeartFill} />
-          </Stack>
+          </Stack> */}
         </Stack>
       </Box>
     </Center>

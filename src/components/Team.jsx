@@ -22,9 +22,9 @@ export const ItemMover = styled.div`
 
 export const Team = () => {
   return (
-    <Box  style={{ overflow: 'hidden' }} p={'140px'} >
+    <Box  style={{ overflow: 'hidden' }} p={'140px'} mt={{ base: '10px', sm: '20px', md: '20px', lg: '25px'}}
+    >
       <Flex 
-          pt={5}
            minH={'60px'}
           //  py={{ base: 2 }}
            px={{ base: 4 }}
@@ -44,10 +44,11 @@ export const Team = () => {
           p={2}
             >Team</Text> 
         </Flex>
-        <Flex direction={'row'} justifyContent={'space-between'} >
+        <Flex direction={'row'} justifyContent={'space-between'} mt={'50px'} >
 
           <ItemMover>
-        <Flex direction={['row']} justifyContent={'space-around'}  width={'auto'}>
+        <Flex direction={['row']} justifyContent={'space-around'}  width={'auto'} overflow={'hidden'}
+        style={{ overflow: 'hidden' }}>
           {teamNames.map((member) => (
             <>
           <TeamItem name={member.name} title={member.title} image={member.image} description={member.description} />
