@@ -1,10 +1,10 @@
-import { Box, Flex, Image, Text, Heading } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, Heading, useColorMode } from '@chakra-ui/react';
 import React from 'react'
 import './about.css'
 const About = () => {
+  const { colorMode } = useColorMode(); 
   return (
-    <div style={{minHeight: '100vh', minWidth: '100%'}}>
-    <Box width='100%' minHeight={'100vh'} style={{ position: 'relative', backgroundColor: '' }}>
+    <div style={{minHeight: '100vh', minWidth: '100%', position: 'relative'}}>
       <div style={{
         // content: '',
         position: 'absolute',
@@ -13,17 +13,20 @@ const About = () => {
         width: '100%',
         height: '100%'
       }}>
-        <Image src={'images/newbg.svg'} w={'100%'}
+        {
+          colorMode === 'dark' ? (<Image src={'/images/newbg.svg'} w={'100%'}
           objectFit='cover'
           align={'center'}
-          h={'100%'} />
+          h={'100%'} />) : ''
+        }
       </div>
+    <Box py={10} px={{ base: 4, sm: 10, md: 20, lg: 20 }} width='100%' minHeight={'100vh'} style={{ position: 'relative', backgroundColor: '' }}>
       <Flex
         minH={'100px'}
         py={{ base: 2 }}
-        px={{ base: 4 }}
-        align={'center'}
-        justifyContent={'center'}
+        // px={{ base: 4 }}
+        // align={'center'}
+        // justifyContent={'space-between'}
       >
         <Heading
           lineHeight={1.1}
@@ -41,24 +44,14 @@ const About = () => {
           //   bg={'pink.400'}
           fontFamily={'alice'}
           p={2}
-          _after={{
-            content: "''",
-            width: '100px',
-            height: '20%',
-            position: 'absolute',
-            bottom: 1,
-            left: '10px',
-            bg: 'purple.400',
-            zIndex: -1,
-          }}
         >About Binary Club</Text>
 
         </Heading>
       </Flex>
-      <Box p={5}>
+      <Box  pt={5}>
         <Flex
-          align={'center'}
-          justifyContent={'space-around'}
+          // align={'center'}
+          justifyContent={'space-between'}
           // w={'full'}
           wrap={'wrap'}
           // overflow={'hidden'}
@@ -71,14 +64,16 @@ const About = () => {
             fontSize='2xl'
             fontFamily={'Amaranth'}
             maxWidth={'45rem'}
-            bg={'lightgray'}
+            bg={'blue.800'}
             p={5}
-            bgColor={'blue.800'}
+            // bgColor={'blue.800'}
+
             style={{
               // backgroundColor: `${'purple.400'}`,
               boxShadow: '10px 10px',
               lineHeight: '1.2em'
             }}
+            // color={'white'}
           >
             <Heading fontFamily={'alice'} color={'green.400'} p={2} align={'center'} >Mission of Binary Club</Heading>
             To provide exposure and knowledge of trending and upcoming technologies while at the same time educating the tech enthusiasts. Identify hidden talents, provide opportunities for students to realise their full potential, and accordingly shape them into future pioneers entrepreneurs and bridging the gap between students and alumni of college through mentorships
@@ -88,14 +83,15 @@ const About = () => {
             fontSize='2xl'
             fontFamily={'Amaranth'}
             maxWidth={'45rem'}
-            bg={'lightgray'}
+            bg={'blue.800'}
             p={5}
-            bgColor={'blue.800'}
+            // bgColor={'blue.800'}
             style={{
               // backgroundColor: `${'purple.400'}`,
               boxShadow: '10px 10px',
               lineHeight: '1.2em'
             }}
+            // color={'white'}
           >
             <Heading fontFamily={'alice'} color={'green.400'} p={2} align={'center'}>Why join?</Heading>
             To provide exposure and knowledge of trending and upcoming technologies while at the same time educating the tech enthusiasts. Identify hidden talents, provide opportunities for students to realise their full potential, and accordingly shape them into future pioneers entrepreneurs and bridging the gap between students and alumni of college through mentorships

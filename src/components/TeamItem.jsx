@@ -8,12 +8,6 @@ import {
   Image,
 } from '@chakra-ui/react';
 
-import { Icon } from '@chakra-ui/react'
-import { FaGithub } from 'react-icons/fa';
-import {RiHomeHeartFill} from 'react-icons/ri'
-
-// import styled, { keyframes } from 'styled-components';
-
 const IMAGE = 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
 
 
@@ -54,15 +48,15 @@ const TeamItem = ({ image = IMAGE, name = "Name", description, title }) => {
           </Heading>
           <Stack align={'center'}>
             {title.includes('President') ? (
-              <Text fontWeight={1000} fontSize={'xl'} color='green.500'>
+              <Text fontWeight={1000} fontSize={'xl'} color='blue.500'>
                 {title}
               </Text>
-            ) : <Text fontWeight={800} fontSize={'xl'}>
+            ) : <Text fontWeight={300} fontSize={'xl'}>
               {title}
             </Text>}
-            <Text color={'gray.400'}>
+            {/* <Text color={'gray.400'}>
               {description}
-            </Text>
+            </Text> */}
           </Stack>
           {/* <Stack align={'center'} direction={'row'} spacing={'25px'} pos={'absolute'} style={{bottom: 0}}>
             <Icon w={8} h={8} as={FaGithub} />

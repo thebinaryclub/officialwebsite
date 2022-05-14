@@ -1,4 +1,4 @@
-import { Box,  Flex, Heading, Image, Stack, Text } from '@chakra-ui/react';
+import { Box,  Flex, Heading, Image, Stack, Text, useColorMode } from '@chakra-ui/react';
 import { chakra } from '@chakra-ui/react'
 import { motion, isValidMotionProp } from 'framer-motion'
 
@@ -10,8 +10,9 @@ const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
   });
 const index = () => {
+    const { colorMode } = useColorMode(); 
     return (
-        <Box bg={'url("/images/voo.svg")'} w={'full'} h={'100vh'} style={{
+        <Box bg={colorMode === 'dark' ? 'url("/images/voo.svg")': 'url("/images/ass.svg")'} w={'full'} h={'100vh'} style={{
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
         }} textAlign='center'>
@@ -30,7 +31,7 @@ const index = () => {
                                 // as={motion.div}
                                 fontFamily={'alice'}
                             fontSize={{ base: '5rem', sm: '6rem', lg: '7rem' }}
-                                color={'white'}
+                                // color={'white'}
                                 position={'relative'}
                                 style={{
                                     zIndex: 3
@@ -44,22 +45,12 @@ const index = () => {
                                     x: { type: "spring", stiffness: 100 },
                                     default: { duration: 2 },
                                   }}
-                                // _after={{
-                                //     content: "''",
-                                //     width: 'full',
-                                //     height: '20%',
-                                //     position: 'absolute',
-                                //     bottom: 1,
-                                //     left: 0,
-                                //     right: 0,
-                                //     bg: 'purple.400',
-                                //     zIndex: -1,
-                                // }}
                                 >
                                 B<span style={{ color: '#2C5282' }} >I</span>NARY
                             </ChakraBox>
                             <Text as={'span'} color={'blue.200'} fontSize='3xl' 
                              fontFamily={''}
+                             bg={colorMode === 'dark' ? 'transparent' : 'white'}
                             >
                                 It's all about 0's and 1's
                             </Text>
