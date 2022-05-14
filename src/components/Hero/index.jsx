@@ -1,5 +1,4 @@
-import { Box,  Flex, Heading, Image, Stack, Text, useColorMode } from '@chakra-ui/react';
-import { chakra } from '@chakra-ui/react'
+import { Box,  Flex, Heading, Image, Stack, Text, useColorMode, chakra } from '@chakra-ui/react';
 import { motion, isValidMotionProp } from 'framer-motion'
 
 const ChakraBox = chakra(motion.div, {
@@ -9,7 +8,7 @@ const ChakraBox = chakra(motion.div, {
      */
     shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
   });
-const index = () => {
+const Home = () => {
     const { colorMode } = useColorMode(); 
     return (
         <Box bg={colorMode === 'dark' ? 'url("/images/voo.svg")': 'url("/images/ass.svg")'} w={'full'} h={'100vh'} style={{
@@ -69,4 +68,4 @@ const index = () => {
     )
 }
 
-export default index;
+export default Home;
