@@ -6,12 +6,13 @@ import {
   Text,
   Stack,
   Image,
+  Link,
 } from '@chakra-ui/react';
 
 const IMAGE = 'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
 
 
-const TeamItem = ({ image = IMAGE, name = "Name", description, title }) => {
+const TeamItem = ({ image = IMAGE, name = "Name", description, title, link="#" }) => {
   return (
     <Center pr={20}>
       <Box
@@ -35,33 +36,24 @@ const TeamItem = ({ image = IMAGE, name = "Name", description, title }) => {
           pos={'relative'}
        >
           <Image
-            rounded={'lg'}
+          borderRadius={'50%'}
             objectFit={'cover'}
             src={image}
-            w={'250px'}
-            h={'250px'}
+            w={'230px'}
+            h={'230px'}
           />
         </Box>
         <Stack align={'center'} mt={2}>
-          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+          <Link href={link}>
+          <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={600}>
             {name}
           </Heading>
+          </Link> 
           <Stack align={'center'}>
-            {title.includes('President') ? (
-              <Text fontWeight={1000} fontSize={'xl'} color='blue.500'>
-                {title}
-              </Text>
-            ) : <Text fontWeight={300} fontSize={'xl'}>
+             <Text fontWeight={500} fontSize={'xl'}>
               {title}
-            </Text>}
-            {/* <Text color={'gray.400'}>
-              {description}
-            </Text> */}
+            </Text>
           </Stack>
-          {/* <Stack align={'center'} direction={'row'} spacing={'25px'} pos={'absolute'} style={{bottom: 0}}>
-            <Icon w={8} h={8} as={FaGithub} />
-            <Icon w={8} h={8} as={RiHomeHeartFill} />
-          </Stack> */}
         </Stack>
       </Box>
     </Center>

@@ -1,4 +1,4 @@
-import { Box,  Flex, Heading, Image, Stack, Text, useColorMode, chakra } from '@chakra-ui/react';
+import { Box,  Flex, Heading, Image, Stack, Text, useColorMode, chakra, useColorModeValue } from '@chakra-ui/react';
 import { motion, isValidMotionProp } from 'framer-motion'
 
 const ChakraBox = chakra(motion.div, {
@@ -29,6 +29,7 @@ const Home = () => {
                             <ChakraBox
                                 // as={motion.div}
                                 fontFamily={'alice'}
+                                color={useColorModeValue('purple.700', 'white')}
                             fontSize={{ base: '5rem', sm: '6rem', lg: '7rem' }}
                                 // color={'white'}
                                 position={'relative'}
@@ -48,7 +49,7 @@ const Home = () => {
                                 B<span style={{ color: '#2C5282' }} >I</span>NARY
                             </ChakraBox>
                             <Text as={'span'} color={'blue.200'} fontSize='3xl' 
-                             fontFamily={''}
+                             fontFamily={'Alex Brush'}
                              bg={colorMode === 'dark' ? 'transparent' : 'white'}
                             >
                                 It's all about 0's and 1's
