@@ -1,16 +1,22 @@
 import React from 'react'
 import Navbar from '../../components/Navbar';
-import Hero from '../../components/Hero';
 import About from '../../components/About';
-// import Sidebar from '../../components/Sidebar';
 import { Team } from '../../components/Team';
+import Domain from '../../components/Domain'
+import Footer from '../../components/Footer';
+import Hero from '../../components/Hero';
+import Members from '../../components/Members/Members';
+
 export const Home = () => {
   return (
     <div>
         <Navbar />
         <Hero />
         <About />
+        <Members />
+        <Domain />
         <Team />
+        <Footer />
     </div>
   )
 }

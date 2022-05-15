@@ -10,19 +10,14 @@ import {
     Link,
     Popover,
     PopoverTrigger,
-    PopoverContent,
     useColorModeValue,
-    useBreakpointValue,
     useDisclosure,
-    Image,
-    Grid,
     useColorMode
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
-    ChevronRightIcon,
   } from '@chakra-ui/icons';
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
   
@@ -36,7 +31,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
         zIndex: 100,
       }}>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue('white', 'black')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
           py={{ base: 2 }}
@@ -61,7 +56,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
            <Box  width='140px' as='div'>
              {console.log(colorMode)}
-              <img src={colorMode == 'dark' ? '/images/bin.png' : '/images/Asset.png'} width='100%' height='100%'alt='Binary Club' />
+              <img src={colorMode === 'dark' ? '/images/bin.png' : '/images/Asset.png'} width='100%' height='100%'alt='Binary Club' />
            </Box>
           </Flex>
 
@@ -102,7 +97,6 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
   const DesktopNav = () => {
     const linkColor = useColorModeValue('gray.600', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
       <Stack direction={'row'} spacing={4}>
@@ -129,41 +123,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
       </Stack>
     );
   };
-  
-  const DesktopSubNav = ({ label, href, subLabel }) => {
-    return (
-      <Link
-        href={href}
-        role={'group'}
-        display={'block'}
-        p={2}
-        rounded={'md'}
-        _hover={{ bg: useColorModeValue('green.50', 'gray.900') }}>
-        <Stack direction={'row'} align={'center'}>
-          <Box>
-            <Text
-              transition={'all .3s ease'}
-              _groupHover={{ color: 'green.400' }}
-              fontWeight={500}>
-              {label}
-            </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
-          </Box>
-          <Flex
-            transition={'all .3s ease'}
-            transform={'translateX(-10px)'}
-            opacity={0}
-            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-            justify={'flex-end'}
-            align={'center'}
-            flex={1}>
-            <Icon color={'green.400'} w={5} h={5} as={ChevronRightIcon} />
-          </Flex>
-        </Stack>
-      </Link>
-    );
-  };
-  
+
   const MobileNav = () => {
     return (
       <Stack

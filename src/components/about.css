@@ -1,0 +1,33 @@
+.box-move{
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@keyframes up-down {
+    0% {
+      transform: translateY(30px);
+}
+    100% {
+      transform: translateY(-30px);
+    }
+}
+
+/* .elements{
+} */
+.elements{
+  position: relative;
+  /* display: inline-block; */
+  background-color: blue;
+  width: 100%;
+  height: 100%;
+}
+.element > span{
+  background-color: rgb(243, 241, 255);
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+}
+.ele{
+  clip-path: circle(50% at 50% 50%);
+  background-color: green;
+}
