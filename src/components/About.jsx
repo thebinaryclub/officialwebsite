@@ -1,6 +1,17 @@
 import { Box, Flex, Image, Text, Heading, useColorMode, useColorModeValue, Spacer } from '@chakra-ui/react';
 import React from 'react'
 import './about.css'
+
+const data = {
+  why: '',
+  about: 'To provide exposure and knowledge of trending and upcoming technologies \
+  while at the same time educating the tech enthusiasts. Identify hidden talents, \
+  provide opportunities for students to realise their full potential, and accordingly \
+  shape them into future pioneers entrepreneurs and bridging the gap between students \
+  and alumni of college through mentorships'
+}
+
+
 const About = () => {
   const { colorMode } = useColorMode();
   return (
@@ -64,7 +75,7 @@ const About = () => {
                 color={'white'}
               >
                 <Heading fontFamily={'alice'} color={'green.400'} p={2} align={'center'} >Mission of Binary Club</Heading>
-                To provide exposure and knowledge of trending and upcoming technologies while at the same time educating the tech enthusiasts. Identify hidden talents, provide opportunities for students to realise their full potential, and accordingly shape them into future pioneers entrepreneurs and bridging the gap between students and alumni of college through mentorships
+                {data.about}
               </Text>
               <Spacer />
               <Text
