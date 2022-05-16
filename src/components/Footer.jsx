@@ -62,7 +62,7 @@ import {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
           <Logo />
-          <Text>© 2022 Binary. Made with &#10084; by <Link href='https://9aditya9.biz' color={'purple.400'} isExternal>Aditya Bhadauriya</Link> </Text>
+          <Text>© 2022 Binary. Made with &#10084; by <Link href='#' color={'purple.400'} isExternal>Aditya Bhadauriya</Link> </Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'#'}>
               <FaTwitter />
