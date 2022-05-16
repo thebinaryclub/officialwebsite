@@ -14,7 +14,7 @@ import {
   const Logo = (props) => {
     return (
         <Box w={'140px'}>
-        <Image src={'/images/Asset.png'} w={'100%'} h={'100%'} />
+        <Image src={'/images/logo/binarylogo.png'} w={'100%'} h={'100%'} />
         </Box>
     );
   };

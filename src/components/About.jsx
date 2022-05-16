@@ -3,19 +3,22 @@ import React from 'react'
 import './about.css'
 
 const data = {
-  why: '',
-  about: 'To provide exposure and knowledge of trending and upcoming technologies \
-  while at the same time educating the tech enthusiasts. Identify hidden talents, \
-  provide opportunities for students to realise their full potential, and accordingly \
-  shape them into future pioneers entrepreneurs and bridging the gap between students \
-  and alumni of college through mentorships'
+  why: "Are you interested in technology and curious to know how it works? Well it's just your luck, because Binary is here to help you \
+  get you started and go beyond the limits while meeting other talented and passionate students. Binary provides students with the chance to interact with industry professionals,\
+  develop new skills and collaborate with fellow innovators to stay ahead from the curve",
+  about: "Binary is an all-inclusive RKGIT's largest student-run technical club focused in computer science to promote curiosity and \
+  excitement for a future in technology, while guiding students on their paths to success. \
+  Empowering students to realise their full potential, and \
+  accordingly shape them into future pioneers \
+  entrepreneurs and bridging the gap between \
+  students and alumni of college throughk mentorships"
 }
 
 
 const About = () => {
   const { colorMode } = useColorMode();
   return (
-    <div style={{ minHeight: '100vh', minWidth: '100%', position: 'relative' }}>
+    <div id={'About'} style={{ minHeight: '100vh', minWidth: '100%', position: 'relative' }}>
       <div style={{
         position: 'absolute',
         zIndex: '-1',
@@ -74,7 +77,7 @@ const About = () => {
                 }}
                 color={'white'}
               >
-                <Heading fontFamily={'alice'} color={'green.400'} p={2} align={'center'} >Mission of Binary Club</Heading>
+                <Heading fontFamily={'alice'} color={'green.400'} p={2} align={'center'} >What is Binary?</Heading>
                 {data.about}
               </Text>
               <Spacer />
@@ -91,7 +94,7 @@ const About = () => {
                 color={'white'}
               >
                 <Heading fontFamily={'alice'} color={'green.400'} p={2} align={'center'}>Why join?</Heading>
-                To provide exposure and knowledge of trending and upcoming technologies while at the same time educating the tech enthusiasts. Identify hidden talents, provide opportunities for students to realise their full potential, and accordingly shape them into future pioneers entrepreneurs and bridging the gap between students and alumni of college through mentorships
+                {data.why}
               </Text>
             </Box>
             <Box w={'300px'} h={'300px'} className="box-move">
