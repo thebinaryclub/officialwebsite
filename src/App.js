@@ -20,8 +20,7 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <ParallaxProvider>
-        {/* <Home /> */}
-        <div style={{width: '100vw', height: '100vh', textAlign: 'center', transform: 'translate(0%, 50%)', fontSize: '50px'}}>Coming soon...</div>
+        <Home />
       </ParallaxProvider>
 
     </ChakraProvider>

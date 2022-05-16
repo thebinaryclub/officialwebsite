@@ -1,5 +1,5 @@
-import { Flex, Text, Box, Image } from '@chakra-ui/react'
-import React from 'react'
+import { Flex, Text, Box, Image, useColorModeValue, useColorMode } from '@chakra-ui/react'
+import React, { useState } from 'react'
 import TeamItem from './TeamItem';
 import styled, { keyframes } from 'styled-components';
 
@@ -13,7 +13,7 @@ export const Foo = keyframes`
 `;
 
 export const ItemMover = styled.div`
-  animation: ${Foo} 10s linear 0s infinite;
+  animation: ${Foo} 25s linear 0s infinite;
   &:hover {
     animation-play-state: paused;
   }
@@ -27,16 +27,11 @@ export const ItemMover = styled.div`
 // });
 
 export const Team = () => {
+  const { colorMode } = useColorMode();
+
   return (
-    <div style={{position: 'relative'}}>
-      {/* <Box position="absolute">
-        <Image src={'/images/background/team.png'} style={{
-          transform: 'rotate(180deg)'
-        }} w={'100%'} h={'100%'}/>
-      </Box> */}
-
+    <div id={'Team'} style={{position: 'relative'}}>
     <Box py={10} px={{ base: 4, sm: 10, md: 20, lg: 20 }} width='100%' minHeight={'100vh'} style={{ position: 'relative' }}>
-
       <Flex
         pt={5}
         minH={'60px'}
@@ -82,11 +77,12 @@ export const Team = () => {
 
         </Flex>
       </Box>
-      <Box  position="absolute" bottom={0} style={{
+      <Box  position="absolute" bottom={0} bg={'primary'} style={{
         zIndex:'-1',
-        left: '0px'
+        left: '0px',
+        width: '100%'
       }}>
-        <Image src={'/images/background/team.png'} w={'100%'} h={'100%'}/>
+        <Image src={`/images/background/teams-wave-${colorMode}.svg`} w={'100%'} h={'100%'}/>
       </Box>
     </Box>
     </div>
@@ -98,8 +94,48 @@ const teamNames = [
   {
     name: 'Aditya Bhadauriya',
     title: 'President',
-    image: '/images/human.svg',
+    image: '/images/members/aditya.png',
     description: 'I am a junior majoring in CSE',
     link: "https://9aditya9.biz",
-  }
+  }, 
+  {
+    name: 'Nitin',
+    title: 'Vice-President',
+    image: '/images/members/nitin.png'
+  },
+  { 
+    name: 'Amit Vikram Seth',
+    title: 'Management Head',
+    image: '/images/human.svg'
+  },
+  { 
+    name: 'Indramani Pandey',
+    title: 'Community Manager',
+    image: '/images/members/indramani.png',
+  },
+  { 
+    name: 'Ravi Singh',
+    title: 'Technical Manager',
+    image: '/images/members/ravi.png'
+  },
+  { 
+    name: 'Avneesh Singh',
+    title: 'Event Manager',
+    image: '/images/human.svg'
+  },
+  { 
+    name: 'Bharat Bhushan Anand',
+    title: 'Web & Member Coordinator',
+    image: '/images/members/bharat.png'
+  },
+  // { 
+  //   name: 'Sidharth Singh',
+  //   title: 'Web',
+  //   image: '/images/members/'
+  // },
+  // { 
+  //   name: 'Avneesh Singh',
+  //   title: 'Event Manager',
+  //   image: '/images/members/'
+  // }
 ]

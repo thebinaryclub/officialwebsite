@@ -22,7 +22,6 @@ const config = {
   initialColorMode: 'dark',
   useSystemColorMode: false,
 
-  semanticTokens: {
     colors: {
       error: 'red.500',
       success: 'green.500',
@@ -34,7 +33,6 @@ const config = {
         default: 'red.800',
         _dark: 'red.700',
       },
-    },
   },
 }
 

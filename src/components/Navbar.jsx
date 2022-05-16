@@ -12,7 +12,8 @@ import {
     PopoverTrigger,
     useColorModeValue,
     useDisclosure,
-    useColorMode
+    useColorMode,
+    Image
   } from '@chakra-ui/react';
   import {
     HamburgerIcon,
@@ -28,7 +29,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
       <Box style={{ 
         position:'sticky',
         top:'0',
-        zIndex: 100,
+        zIndex: 1000,
       }}>
         <Flex
           bg={useColorModeValue('white', 'black')}
@@ -53,10 +54,10 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
               aria-label={'Toggle Navigation'}
             />
           </Flex>
-          <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-           <Box  width='140px' as='div'>
+          <Flex flex={{ base: 1 }} justifyContent={'flex-start'}>
+           <Box  width='50px' >
              {console.log(colorMode)}
-              <img src={colorMode === 'dark' ? '/images/bin.png' : '/images/Asset.png'} width='100%' height='100%'alt='Binary Club' />
+              <Image src={'/images/logo/binarylogo.png'} width='100%' height='100%'alt='Binary Club' />
            </Box>
           </Flex>
 
@@ -72,18 +73,23 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
  
           <ColorModeSwitcher justifySelf="flex-end" />
+                <Link href="https://discord.gg/H23rA2Gt"
+                isExternal
+                >
             <Button
               // display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'md'}
               fontWeight={600}
               color={'white'}
-              bg={'green.400'}
+              bg={'#EF233C'}
               href={'#'}
               _hover={{
-                bg: 'green.300',
+                bg: '#8D99AE',
               }}>
+
               Join Discord
             </Button>
+                </Link>
           </Stack>
         </Flex>
   
@@ -159,7 +165,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
           {children && (
             <Icon
               as={ChevronDownIcon}
-              transition={'all .25s ease-in-out'}
+              transition={'all 5s ease-in-out'}
               transform={isOpen ? 'rotate(180deg)' : ''}
               w={6}
               h={6}
@@ -190,18 +196,18 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
   const NAV_ITEMS = [
     {
       label: 'About',
-      // href: 'http://9aditya9.biz'
+      href: '/#About'
     },
     {
       label: 'Events',
-      // href:'http://9aditya9.biz'
+      href:'/#Events'
     },
     {
       label: 'Team',
-      href: '#',
+      href: '#Team',
     },
     {
       label: 'Sponsors',
-      href: '#',
+      href: '#Sponsors',
     },
   ];

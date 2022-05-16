@@ -24,7 +24,7 @@ import {
           role={'group'}
           px={6}
           // p={5}
-          w={'300px'}
+          w={'250px'}
           h={'450px'}
           bg={useColorModeValue('white', 'gray.800')}
           boxShadow={'2xl'}
@@ -44,8 +44,8 @@ import {
               rounded={'lg'}
               objectFit={'cover'}
               src={image}
-              w={'250px'}
-              h={'250px'}
+              w={'200px'}
+              h={'200px'}
             />
           </Box>
           <Stack align={'center'} mt={2}>
