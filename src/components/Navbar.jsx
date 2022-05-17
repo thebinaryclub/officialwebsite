@@ -73,7 +73,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
 
  
           <ColorModeSwitcher justifySelf="flex-end" />
-                <Link href="https://discord.gg/H23rA2Gt"
+                <Link href="https://linktr.ee/binaryclub"
                 isExternal
                 >
             <Button
@@ -87,7 +87,7 @@ import { ColorModeSwitcher } from '../ColorModeSwitcher';
                 bg: '#8D99AE',
               }}>
 
-              Join Discord
+              Join Binary
             </Button>
                 </Link>
           </Stack>
