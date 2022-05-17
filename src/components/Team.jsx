@@ -106,7 +106,7 @@ const teamNames = [
   { 
     name: 'Amit Vikram Seth',
     title: 'Management Head',
-    image: '/images/human.svg'
+    image: '/images/members/amit.png'
   },
   { 
     name: 'Indramani Pandey',
