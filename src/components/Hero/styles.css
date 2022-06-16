@@ -11,5 +11,5 @@
 }
 .hero-inside {
     background: rgba(31, 31, 31, 0.13);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(15px);
 }
