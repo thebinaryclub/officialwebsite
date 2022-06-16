@@ -72,18 +72,18 @@ export default function Domain() {
                         >Domains</Text>
                         <Text
                             fontSize='2xl'
-                            fontFamily={'Alex Brush'}
+                            // fontFamily={'Alex Brush'}
                             pt={2}
                         >Everything is covered at Binary Club</Text>
                     </Box>
                     <Box maxW={170} alignItems="center" pos={'absolute'} p={2} style={{
-                        left: '350px',
-                        top: '60px'
+                        left: '300px',
+                        top: '40px'
                     }}>
                         <Parallax
                             speed={0}
                         >
-                            <Image src={'/images/domain.svg'} w={'100%'} h={'100%'} />
+                            <Image src={'/images/png/domain.png'} w={'100%'} h={'100%'} />
                         </Parallax>
                     </Box>
                 </Flex>

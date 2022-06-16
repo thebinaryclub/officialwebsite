@@ -11,7 +11,7 @@ const data = {
   Empowering students to realise their full potential, and \
   accordingly shape them into future pioneers \
   entrepreneurs and bridging the gap between \
-  students and alumni of college throughk mentorships"
+  students and alumni of college through mentorships"
 }
 
 
@@ -26,7 +26,7 @@ const About = () => {
         height: '100%'
       }}>
         {
-          colorMode === 'dark' ? (<Image src={'/images/newbg.svg'} w={'100%'}
+          colorMode === 'dark' ? (<Image src={'/images/png/newbg.svg'} w={'100%'}
             objectFit='cover'
             align={'center'}
             h={'100%'} />) : ''
@@ -68,16 +68,17 @@ const About = () => {
               <Text
                 fontSize='xl'
                 maxWidth={'45rem'}
-                bg={'blue.800'}
+                bg={useColorModeValue('#8D99AE', 'transparent')}
+                className="about-box"
                 p={10}
-                style={{
-                  // backgroundColor: `${'purple.400'}`,
-                  boxShadow: `10px 10px ${useColorModeValue('black', 'white')}`,
-                  lineHeight: '1.2em'
-                }}
-                color={'white'}
+                color={useColorModeValue('black', 'white')}
               >
-                <Heading fontFamily={'alice'} color={'green.400'} p={2} align={'center'} >What is Binary?</Heading>
+                <Heading 
+                fontFamily={'alice'} 
+                color={useColorModeValue('#10002b', 'white')} 
+                p={2} 
+                align={'center'} 
+                >What is Binary?</Heading>
                 {data.about}
               </Text>
               <Spacer />
@@ -85,20 +86,22 @@ const About = () => {
                 mt={20}
                 fontSize='xl'
                 maxWidth={'45rem'}
-                bg={'blue.800'}
+                bg={useColorModeValue('#8D99AE', 'transparent')}
                 p={10}
-                style={{
-                  boxShadow: `10px 10px ${useColorModeValue('black', 'white')}`,
-                  lineHeight: '1.2em'
-                }}
-                color={'white'}
+                className="about-box"
+                color={useColorModeValue('black', 'white')}
               >
-                <Heading fontFamily={'alice'} color={'green.400'} p={2} align={'center'}>Why join?</Heading>
+                <Heading 
+                fontFamily={'alice'} 
+                color={useColorModeValue('#10002b', 'white')} 
+                p={2} 
+                align={'center'} 
+                >Why join?</Heading>
                 {data.why}
               </Text>
             </Box>
             <Box w={'300px'} h={'300px'} className="box-move">
-              <Image w={'100%'} h={'100%'} src={'/images/saly.svg'} />
+              <Image w={'100%'} h={'100%'} src={'/images/png/saly.png'} shadow={false} />
             </Box>
           </Flex>
         </Box>
