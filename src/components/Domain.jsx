@@ -1,4 +1,4 @@
-import { Box, Icon, Text, Stack, Flex, Image, Spacer } from '@chakra-ui/react';
+import { Box, Icon, Text, Stack, Flex, Image, Spacer, useColorModeValue } from '@chakra-ui/react';
 import { icons } from 'react-icons';
 import { FcAssistant } from 'react-icons/fc';
 import { Parallax } from 'react-scroll-parallax';
@@ -10,13 +10,15 @@ const Feature = ({ title, text = "", icon, style }) => {
     console.log(icon.props['as']);
     return (
         <Box
+        className='domain-box'
             // justifyContent={'space-between'}
-            style={{ border: '1px solid gray' }}
             _hover={{ bg: `blue.800`, color: 'white' }}
             mt={10} p={4}
             fontFamily={'alice'}
             w={'400px'}
             maxWidth={'80vw'}
+            bg={useColorModeValue('#2B2D42')}
+color={'white'}
         >
             <Text fontWeight={800}  fontSize='3xl' >{title}</Text>
             <Flex
@@ -29,7 +31,7 @@ const Feature = ({ title, text = "", icon, style }) => {
                 >
                 <Image src={icon.props['as']} w={'200px'} h={'200px'} />
             </Flex>
-            <Stack w={'100%'}>
+            <Stack w={'100%'} color={'white'}>
             <Text>{text}</Text>
             </Stack>
             {/* <Box w={'250px'} h={'200px'}>
@@ -68,7 +70,7 @@ export default function Domain() {
                                 borderBottomRightRadius: '35px'
                             }}
                             maxW={'fit-content'}
-                            p={2}
+                            p={{base: 2, lg: 2, md: 2}}
                         >Domains</Text>
                         <Text
                             fontSize='2xl'
@@ -77,9 +79,11 @@ export default function Domain() {
                         >Everything is covered at Binary Club</Text>
                     </Box>
                     <Box maxW={170} alignItems="center" pos={'absolute'} p={2} style={{
-                        left: '300px',
+                        left: '250px',
                         top: '40px'
-                    }}>
+                    }}
+                    ml={{base: 1, lg: 8, md: 8}}
+                    >
                         <Parallax
                             speed={0}
                         >

@@ -38,7 +38,7 @@ const Home = () => {
                             >
                             <ChakraBox
                                 // as={motion.div}
-                                fontFamily={'manrope'}
+                                // fontFamily={'manrope'}
                                 // color={useColorModeValue('purple.700', 'white')}
                                 color={useColorModeValue('#EF233C', '#2B2D42')}
                             fontSize={{ base: '5rem', sm: '6rem', lg: '7rem' }}
@@ -60,7 +60,9 @@ const Home = () => {
                                 The<Box as='span' 
                                 color={useColorModeValue('#2B2D42', 'white')}
                                 // bg='red'
-                                // style={{ color: '#2B2D42' }} 
+                                style={{ 
+                                    letterSpacing: '2px',
+                                 }} 
                                 > BINARY </Box>Club
                             </ChakraBox>
                             <Text 

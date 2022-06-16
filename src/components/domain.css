@@ -1,3 +1,13 @@
+.domain-box{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border-radius: 12px;
+    /* border: 1px solid rgba(255, 255, 255, 0.178); */
+    line-height: 1.5em;
+    font-weight: 550;
+}
+
+
 .dom-container{
     /* background: black; */
     /* background-image: url('../assets/sample.svg'); */
