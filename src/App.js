@@ -1,12 +1,12 @@
-import '@fontsource/raleway/400.css'
-import '@fontsource/open-sans/700.css'
-import '@fontsource/aclonica'
-import "@fontsource/arbutus"
-import "@fontsource/alegreya-sc"
+// import '@fontsource/raleway/400.css'
+// import '@fontsource/open-sans/700.css'
+// import '@fontsource/aclonica'
+// import "@fontsource/arbutus"
+// import "@fontsource/alegreya-sc"
 import "@fontsource/alice"
-import "@fontsource/alex-brush"
-import "@fontsource/amaranth"
-
+// import "@fontsource/alex-brush"
+// import "@fontsource/amaranth"
+import "@fontsource/manrope"
 import React from 'react';
 import {
   ChakraProvider,

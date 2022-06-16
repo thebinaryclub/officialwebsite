@@ -1,5 +1,6 @@
-import { Box,  Flex, Heading, Image, Stack, Text, useColorMode, chakra, useColorModeValue } from '@chakra-ui/react';
+import { Box,  Flex, Heading, Image, Stack, Text, chakra, useColorModeValue } from '@chakra-ui/react';
 import { motion, isValidMotionProp } from 'framer-motion'
+import './styles.css';
 
 const ChakraBox = chakra(motion.div, {
     /**
@@ -9,13 +10,22 @@ const ChakraBox = chakra(motion.div, {
     shouldForwardProp: (prop) => isValidMotionProp(prop) || prop === 'children',
   });
 const Home = () => {
-    const { colorMode } = useColorMode(); 
+    // const { colorMode } = useColorMode(); 
     return (
-        <Box bg={colorMode === 'dark' ? 'url("/images/voo.svg")': 'url("/images/ass.svg")'} w={'full'} h={'100vh'} style={{
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-        }} textAlign='center'>
-            <Box textAlign="center" fontSize="xl" >
+        <Box 
+        // bg={colorMode === 'dark' ? 'url("/images/voo.svg")': 'url("/images/ass.svg")'} 
+        className="hero-box"
+        w={'full'} 
+        minh={'100vh'} 
+        // style={{
+        //     backgroundRepeat: 'no-repeat',
+        //     backgroundSize: 'cover',
+        // }} 
+        textAlign='center'
+        >
+            {/* <Box className="hero-box">
+            </Box> */}
+            <Box textAlign="center" fontSize="xl" className="hero-inside" >
                 <Flex align="center" justifyContent="center" minH="100vh" p={3} textAlign="center">
                     <Stack align="center" justifyContent={'center'} wrap={'wrap'}  >
                         <Heading
@@ -28,35 +38,43 @@ const Home = () => {
                             >
                             <ChakraBox
                                 // as={motion.div}
-                                fontFamily={'alice'}
-                                color={useColorModeValue('purple.700', 'white')}
+                                fontFamily={'manrope'}
+                                // color={useColorModeValue('purple.700', 'white')}
+                                color={useColorModeValue('#EF233C', '#2B2D42')}
                             fontSize={{ base: '5rem', sm: '6rem', lg: '7rem' }}
                                 // color={'white'}
                                 position={'relative'}
                                 style={{
                                     zIndex: 3
                                 }}
-                                  animate={{ y: [-100, 0], opacity: [0, 0.5, 1] }}
-                                  // @ts-ignore no problem in operation, although type error appears.
-                                  transition={{
-                                    duration: 3,
-                                    ease: "easeInOut",
-                                    delay: 1,
-                                    x: { type: "spring", stiffness: 100 },
-                                    default: { duration: 2 },
-                                  }}
+                                //   animate={{ y: [-100, 0], opacity: [0, 0.5, 1] }}
+                                //   // @ts-ignore no problem in operation, although type error appears.
+                                //   transition={{
+                                //     duration: 3,
+                                //     ease: "easeInOut",
+                                //     delay: 1,
+                                //     x: { type: "spring", stiffness: 100 },
+                                //     default: { duration: 2 },
+                                //   }}
                                 >
-                                B<span style={{ color: '#2C5282' }} >I</span>NARY
+                                The<Box as='span' 
+                                color={useColorModeValue('#2B2D42', 'white')}
+                                // bg='red'
+                                // style={{ color: '#2B2D42' }} 
+                                > BINARY </Box>Club
                             </ChakraBox>
-                            <Text as={'span'} color={'blue.200'} fontSize='3xl' 
-                             fontFamily={'Alex Brush'}
-                             bg={colorMode === 'dark' ? 'transparent' : 'white'}
+                            <Text 
+                                color={useColorModeValue('#2B2D42', 'white')}
+                            as={'span'}
+                             fontSize='3xl' 
+                             fontFamily={'manrope'}
+                            //  bg={colorMode === 'dark' ? 'transparent' : 'white'}
                             >
                                 It's all about 0's and 1's
                             </Text>
                         </Heading>
                         <Box m={0} p={0} >
-                            <Image src={'/images/sally.svg'}  boxSize='sm' objectFit='cover'  />
+                            <Image src={'/images/png/sally.png'}  boxSize='sm' objectFit='cover'  />
                         </Box>
                         
                     </Stack>
