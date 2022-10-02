@@ -24,7 +24,7 @@ const Tracks = () => {
         color={'white.500'}
         textTransform={'uppercase'}
         fontWeight='bold'
-        fontSize='5rem'
+        fontSize='4rem'
         fontFamily={'Nunito'}
         letterSpacing={1.1}
         >
