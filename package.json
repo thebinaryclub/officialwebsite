@@ -16,8 +16,7 @@
     "@fontsource/manrope": "^4.5.10",
     "@fontsource/open-sans": "^4.5.8",
     "@fontsource/raleway": "^4.5.8",
-    "@react-three/drei": "^9.8.0",
-    "@react-three/fiber": "^8.0.14",
+ 
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^10.4.9",
     "@testing-library/user-event": "^12.8.3",
@@ -28,10 +27,9 @@
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
     "react-scroll-parallax": "^3.2.0",
-    "react-tsparticles": "^2.0.6",
+  
     "styled-components": "^5.3.5",
-    "three": "^0.140.2",
-    "tsparticles": "^2.0.6",
+ 
     "web-vitals": "^0.2.4"
   },
   "scripts": {
