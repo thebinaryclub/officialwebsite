@@ -15,14 +15,24 @@ import { Home } from './screens/Home';
 import './App.css'
 import theme from './theme';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import BinaryHacks from "./screens/BinaryHacks";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
       <ParallaxProvider>
-        <Home />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="binaryhacks" element={<BinaryHacks />} />
+          </Routes>
+        </BrowserRouter>
       </ParallaxProvider>
-
     </ChakraProvider>
   );
 }
