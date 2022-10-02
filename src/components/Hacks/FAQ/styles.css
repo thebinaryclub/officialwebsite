@@ -19,7 +19,3 @@
     background: -webkit-linear-gradient(-70deg, #db469f 0%, #2188ff 100%);
 }
 
-body{
-    overflow-x: hidden;
-    max-width: 100vw;
-}
