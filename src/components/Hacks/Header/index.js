@@ -15,7 +15,7 @@ import './styles.css';
 
 const Header = () => {
   return (
-    <Box position="relative">
+    <Box position="relative" overflow={'hidden'}>
       <Box bg="white" className="bg-container">
         <Image
           objectFit="center"
