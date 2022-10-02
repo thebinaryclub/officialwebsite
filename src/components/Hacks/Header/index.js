@@ -1,27 +1,36 @@
-import React from 'react'
-import { Box, Center, Flex, Image, Text, Heading, useColorMode, useColorModeValue, Spacer, Button } from '@chakra-ui/react';
+import React from 'react';
+import {
+  Box,
+  Center,
+  Flex,
+  Image,
+  Text,
+  Heading,
+  useColorMode,
+  useColorModeValue,
+  Spacer,
+  Button,
+} from '@chakra-ui/react';
 import './styles.css';
 
 const Header = () => {
   return (
-    <Box  className='header'>
-        <Box className="header-text">
-          <Center className="head-text">
-            binaryhacks();
-          </Center>
-          <Center className="slogan-text">
-            it's all about 0's & 1's
-          </Center>
-          <Center style={{alignSelf: 'center', top: '50px'}}>
-            <Button colorScheme='teal' variant='outline' fontWeight='bold' spacing={8}  fontSize='24px' padding='30px'
-  lineHeight='1.2rem'>
-              Apply Now
-            </Button>
-          </Center>
-        </Box>
+    <Box position="relative">
+      <Box bg="white" className="bg-container">
+        <Image
+          objectFit="center"
+          align="center"
+          className="bg-image"
+          src={require('./bg.png')}
+          alt="header"
+        />
+      </Box>
+      <Flex className='head-text-container' flexDirection="column">
+        <Text mt={6}><span className="text-1">In-person event</span> @ RKGIT</Text>
+        <Button variant={'outline'} mt={6} colorScheme='teal' size='lg'>Apply Now</Button>
+      </Flex>
     </Box>
-   
-  )
-}
+  );
+};
 
 export default Header;
