@@ -1,4 +1,5 @@
 import React from 'react'
+import FAQ from '../../components/Hacks/FAQ';
 import Header from '../../components/Hacks/Header';
 import Tracks from '../../components/Hacks/Tracks';
 
@@ -7,6 +8,7 @@ const BinaryHacks = () => {
     <div>
         <Header />
         <Tracks />
+        <FAQ />
     </div>
   )
 }
