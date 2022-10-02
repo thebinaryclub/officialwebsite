@@ -25,7 +25,7 @@ const Header = () => {
           alt="header"
         />
       </Box>
-      <Flex className='head-text-container' flexDirection="column">
+      <Flex className='head-text-container' top={{ base: '90%', md: '70%', lg: '85%' }} flexDirection="column">
         <Text color={'white'} mt={6}><span className="text-1">In-person event</span> @ RKGIT</Text>
         <Button variant={'outline'} mt={6} colorScheme='teal' size='lg'>Apply Now</Button>
       </Flex>
