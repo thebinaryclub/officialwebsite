@@ -5,6 +5,7 @@
     /* background: -webkit-linear-gradient(-70deg, #db469f 0%, #2188ff 100%); */
     background: rgba(59, 57, 57, 0.514);
     border-radius: 16px;
+    color: white;
 }
 .accord-container {
     display: flex;
@@ -16,4 +17,8 @@
 
 .faq {
     background: -webkit-linear-gradient(-70deg, #db469f 0%, #2188ff 100%);
+}
+
+body{
+    overflow-x: hidden;
 }
