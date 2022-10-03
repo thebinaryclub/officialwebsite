@@ -6,6 +6,9 @@
     background: rgba(59, 57, 57, 0.514);
     border-radius: 16px;
     color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
 }
 .accord-container {
     display: flex;
@@ -19,3 +22,7 @@
     background: -webkit-linear-gradient(-70deg, #db469f 0%, #2188ff 100%);
 }
 
+.accord-faq{
+    font-size:18px;
+    font-weight: bold;
+}
