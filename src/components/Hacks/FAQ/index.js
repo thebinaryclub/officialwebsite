@@ -11,7 +11,8 @@ import {
 
 const FAQ = () => {
   return (
-    <Box display={'flex'} className="accord-container" bg={'#090910'} m={0}>
+    <Box>
+    <Box py={'30px'} display={'flex'} className="accord-container" bg={'#090910'} m={0}>
       <Heading m={5} className="accord-heading text-1">
         Frequently Asked Questions
       </Heading>
@@ -24,7 +25,7 @@ const FAQ = () => {
         <AccordionItem className="accord-item">
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box className='accord-faq' flex="1" textAlign="left">
                 What is BinaryHacks?
               </Box>
               <AccordionIcon />
@@ -39,7 +40,7 @@ const FAQ = () => {
         <AccordionItem className="accord-item">
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box className='accord-faq' flex="1" textAlign="left">
                 Who can participate?
               </Box>
               <AccordionIcon />
@@ -56,7 +57,7 @@ const FAQ = () => {
         <AccordionItem className="accord-item">
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box className='accord-faq' flex="1" textAlign="left">
                 How much does it cost to participate?
               </Box>
               <AccordionIcon />
@@ -72,7 +73,7 @@ const FAQ = () => {
         <AccordionItem className="accord-item">
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box className='accord-faq' flex="1" textAlign="left">
                 What if I never participated in a hackathon before?
               </Box>
               <AccordionIcon />
@@ -86,7 +87,7 @@ const FAQ = () => {
         <AccordionItem className="accord-item">
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box className='accord-faq' flex="1" textAlign="left">
                 How many people can be on a team?
               </Box>
               <AccordionIcon />
@@ -100,7 +101,7 @@ const FAQ = () => {
         <AccordionItem className="accord-item">
           <h2>
             <AccordionButton>
-              <Box flex="1" textAlign="left">
+              <Box className='accord-faq' flex="1" textAlign="left">
                 Will BinaryHacks happen in person or virtually?
               </Box>
               <AccordionIcon />
@@ -111,6 +112,7 @@ const FAQ = () => {
           </AccordionPanel>
         </AccordionItem>
       </Accordion>
+    </Box>
     </Box>
   );
 };
