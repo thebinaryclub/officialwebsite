@@ -10,12 +10,16 @@ const About = () => {
             <Heading py={'10px'} className="text-1">
               About Binary Hacks
             </Heading>
+            <Text fontWeight={'bold'} py={'10px'}>
+            “THE BINARY CLUB” is organizing a hackathon named “BINARYHACKS” which will be a 33-hour-long event, which would be totally focused on solving real life from all kinds of tracks which include education, health and even sustainability. THE BINARY CLUB will also provide an appropriate workshop in each domain which will be training about how to look for problems and what approach should be followed to overcome that problem. Hackers need to form a group of 2-5 people for which they have to think of ideas for solving real-world problems and depending on the constraints, the evaluation would be done. This hackathon also includes fun activities for the participants as well as volunteers to freshen up their minds. The club has also invited a guest speaker who will provide valuable information from his industry experience.
+This hackathon will provide self-exposure to the students as well as will help for the better cause of society by providing solutions to real-life problems.
+            </Text>
           </Text>
           <Text>
             <Heading py={'10px'} className="text-1">
               You belong in tech
             </Heading>
-            <Text fontWeight={'bold'}>
+            <Text fontWeight={'bold'} py={'10px'}>
             It might be challenging to break into the tech industry. To make that easier, we are here. BinaryHacks is committed to fostering an open and egalitarian environment for its participants, who hail from a variety of cultures and experiences around the world. By keeping diversity, equity, and inclusion in mind as we work, we hope to create a welcoming environment where everyone may feel free to follow their aspirations.
             </Text>
           </Text>
