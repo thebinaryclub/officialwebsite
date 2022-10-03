@@ -1,14 +1,9 @@
 import React from 'react';
 import {
   Box,
-  Center,
   Flex,
   Image,
   Text,
-  Heading,
-  useColorMode,
-  useColorModeValue,
-  Spacer,
   Button,
 } from '@chakra-ui/react';
 import './styles.css';

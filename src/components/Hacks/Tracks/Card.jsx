@@ -8,26 +8,27 @@ import {
 
 const Card = ({ headingText, description }) => {
   return (
-    <Center py={6} m={3} width='100%'>
+    <Center py={6}  w={'100%'}>
       <Box
-        w={'full'}
-        bg='#202036'
+        mx={2}
+        bg='#11111c'
         boxShadow={'2xl'}
         rounded={'2xl'}
         overflow={'hidden'}
-        height='60vh'>
+        height='50vh'
+        maxH={'full'}>
 
         <Stack>
           <Heading
-            p={4}
-            bg={'#4E1E7E'}
+            p={3}
+            bg='#1d0534'
             color='white'
-            fontSize={'5xl'}
+            fontSize={'4xl'}
             fontFamily={'Nunito'}
           >
             {headingText}
           </Heading>
-          <Text color={'white'} fontSize='1.5rem' p={6} >
+          <Text color={'white'} fontSize='1.4rem' p={5} >
             {description}
           </Text>
         </Stack>

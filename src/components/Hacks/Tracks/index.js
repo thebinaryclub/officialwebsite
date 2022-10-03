@@ -1,4 +1,4 @@
-import { Flex, Text, Box } from '@chakra-ui/react';
+import { Flex, Text, Heading } from '@chakra-ui/react';
 import Card from "./Card"
 import React from 'react'
 import './styles.css';
@@ -19,23 +19,16 @@ const content = [
 ]
 const Tracks = () => {
   return (
-    <Box className='tracks'>
-      <Text
-        color={'white.500'}
-        textTransform={'uppercase'}
-        fontWeight='bold'
-        fontSize='4rem'
-        fontFamily={'Nunito'}
-        letterSpacing={1.1}
-        >
-        TRACKS
-      </Text>
-      <Flex color='white' className='items' justify={'space-around'} direction={['column', 'column', 'column', 'row']}>
+    <Flex className='tracks' justify={'space-around'} direction={'column'} align='center'>
+      <Heading mb={5} mt={0} fontSize={'5xl'} className="accord-heading text-1">
+        Tracks
+      </Heading>
+      <Flex color='white' width='80%' className='items' justify={'space-between'} direction={['column', 'column', 'column', 'row']}>
         {
           content.map(item => (<Card headingText={item.headingText} description={item.description} />))
         }
       </Flex>
-    </Box>
+    </Flex>
   )
 }
 
